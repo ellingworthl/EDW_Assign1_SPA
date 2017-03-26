@@ -1,0 +1,33 @@
+{
+    "id": "Valley",
+
+    "name": "Valley Bowmen",
+
+    "description": "The club have access to a huge parcel of woodland which has two forms, one fir and the other open copice. The mix of woodland along with terrain allow the club to have as many as three separate courses set-up and still have room to spare!", 
+
+    "venue": {
+        "type": "Outdoor range", 
+        "link": "https://valleybowmen.blogspot.co.uk/"
+    }, 
+
+    "facilities": {
+        "parking": "Yes", 
+        "toilet": "Yes", 
+        "refreshements": "Yes - tea & coffee available", 
+        "other": "N/A"
+    },     
+
+    "directions": "From Waterford City take the N25 Waterford - Cork road. In Kilmeaden take the R681 signposted Bunmahon. Follow local 'shoot' signage.", 
+
+    "amenities": {
+        "shop": "Yes; approx 1.5 miles", 
+        "garage": "Yes; approx 1.5 miles", 
+        "accomodation": "Yes; in Waterford"
+    }, 
+
+    "images": [
+        "img/phones/Valley1.jpg",
+        "img/phones/Valley2.jpg",        
+        "img/phones/Valley.jpg" 
+    ] 
+}
