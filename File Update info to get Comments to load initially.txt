@@ -1,0 +1,13 @@
+HACKER NEWS
+
+App.js allowed updates to
+Sub-heading (Submit your review from Add a new post)
+Placeholders (Review Title of your review from Title & Website Link from Link)
+
+
+commentPage.js allowed updates to
+Subheading (Comment on a review from Add a new comment)
+Placeholders (YOUR COMMENT from Comment & YOUR NAME from Name)
+
+index.js
+Title Shoot/Event Reviews from Hacker News)
