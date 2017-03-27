@@ -1,7 +1,7 @@
 GIT repo
 git init
 git add -A
-git commit -m "re-uploading a back-up of EWD-Assignment1 which I have corrupted with conflicting versions trying to fix an bug with name being retained in Review & Comment posts"
+git commit -m "Uploading a back-up of EWD-Assignment1, taken before NavBar Collapse fixed, which I have corrupted with conflicting versions trying to fix an bug with name being retained in Review & Comment posts"
 git remote add origin https://github.com/ellingworthl/EDW_Assign1_SPA.git
 git push -u origin master
 

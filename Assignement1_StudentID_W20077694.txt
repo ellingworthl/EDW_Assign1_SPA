@@ -1,0 +1,6 @@
+https://github.com/ellingworthl/EDW_Assign1_SPA
+This is my submitted App. It is  back-up of EWD-Assignment1, taken before NavBar Collapse fixed, which I have introduced conflicting versions on.
+
+
+This was my original assignment 1 repository before the versioning problem:
+https://github.com/ellingworthl/EWD-Assignment1
