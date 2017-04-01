@@ -1,0 +1,33 @@
+{
+    "id": "Ashgrove",
+
+    "name": "Ashgrove Archers",
+
+    "description": "The club take their name from a significant portion of the woodland available; ash! There's a hugh amount of ground available comprising of deciduous and evergreen forestry. The club mix and match their courses across the available woodland.", 
+
+    "venue": {
+        "type": "Outdoor range", 
+        "link": "https://www.facebook.com/profile.php?id=100009143355252&fref=ts"
+    }, 
+
+    "facilities": {
+        "parking": "Yes", 
+        "toilet": "Yes", 
+        "refreshements": "Yes - tea & coffee available", 
+        "other": "Camping on-site and B&B by prior request"
+    },     
+
+    "directions": "From Waterford, take the N24 Waterford - Carrick On Suir road. Approximately 3.5 miles after turning onto the N24 turn right onto the L7431. Follow local 'shoot' signage.", 
+
+    "amenities": {
+        "shop": "Yes; approx 2 miles", 
+        "garage": "Yes; approx 2 miles", 
+        "accomodation": "Yes; in Mooncoin and Waterford"
+    }, 
+
+    "images": [
+        "img/phones/Ashgrove2.jpg",
+        "img/phones/Ashgrove1.jpg", 
+        "img/phones/Ashgrove.jpg" 
+    ] 
+}

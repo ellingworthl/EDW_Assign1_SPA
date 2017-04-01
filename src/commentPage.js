@@ -19,7 +19,7 @@ var Form = React.createClass({
           if (!comment ) {
               return;
           }
-          this.props.commentHandler(comment ,name );
+          this.props.commentHandler(comment, name );
           this.setState({comment: '', name: ''});
      },
     render : function() {

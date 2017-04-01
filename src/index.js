@@ -4,7 +4,6 @@ import ReactDOM from 'react-dom';
 import '../node_modules/bootstrap/dist/css/bootstrap.css';
 //import '../src/css/bootstrap.css';
 
-
 //new import requirements for routing changes
 import { Router, Route, IndexRoute, browserHistory } from 'react-router';
 //import NavBar from './content/NavBar';
@@ -16,6 +15,8 @@ import ReviewApp from './ReviewApp';
 import CommentView from './commentPage'
 import RegisterApp from './registerApp';
 import VenueApp from './VenueApp';
+//VENUE import
+import VenueDetail from './venueDetail';
 
 
 // ReactDOM.render statement for routing
@@ -26,8 +27,9 @@ import VenueApp from './VenueApp';
                <IndexRoute component={Landing}/>
                <Route path='about' component={About} />
                <Route path='reviews' component={ReviewApp} />
-               <Route path= 'posts/:postId' component={CommentView} />
+               <Route path='posts/:postId' component={CommentView} />
                <Route path='venues' component={VenueApp} />
+               <Route path="phones/:id" component={VenueDetail} />
                <Route path='register' component={RegisterApp} />
             </Route>
           </Router>
