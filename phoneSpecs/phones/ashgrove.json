@@ -9,21 +9,19 @@
         "type": "Outdoor range", 
         "link": "https://www.facebook.com/profile.php?id=100009143355252&fref=ts"
     }, 
+	
+	"association": [
+	"Irish Field Archery Federation (IFAF)"
+    ], 
 
     "facilities": {
         "parking": "Yes", 
         "toilet": "Yes", 
-        "refreshements": "Yes - tea & coffee available", 
+        "refreshments": "Tea & coffee available", 
         "other": "Camping on-site and B&B by prior request"
     },     
 
-    "directions": "From Waterford, take the N24 Waterford - Carrick On Suir road. Approximately 3.5 miles after turning onto the N24 turn right onto the L7431. Follow local 'shoot' signage.", 
-
-    "amenities": {
-        "shop": "Yes; approx 2 miles", 
-        "garage": "Yes; approx 2 miles", 
-        "accomodation": "Yes; in Mooncoin and Waterford"
-    }, 
+    "directions": "From Waterford, take the N24 Waterford - Carrick On Suir road. Approximately 3.5 miles after turning onto the N24 turn right onto the L7431. Then follow local 'shoot' signage.", 
 
     "images": [
         "img/phones/Ashgrove2.jpg",

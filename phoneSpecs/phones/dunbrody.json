@@ -9,21 +9,20 @@
         "type": "Outdoor & Indoor ranges", 
         "link": "http://dunbrodyarchers.com/"
     }, 
-
+	
+	"association": [
+	"Irish Field Archery Federation (IFAF)"
+    ], 
+	
     "facilities": {
         "parking": "Yes", 
         "toilet": "Yes", 
-        "refreshements": "Yes - tea & coffee available (Outdoor only)", 
+        "refreshments": "Yes - tea & coffee available (Outdoor only)", 
         "other": "Camping on-site at woods"
     },     
 
-    "directions": "Outdoor: From New Ross, take the N25 Wexford - New Ross road. At the Horse & Hound Hotel turn onto the R736. Follow local 'shoot' signage. Indoor: 'New Ross Youth Center', Google directions https://goo.gl/maps/MfedFWbV7ND2 ", 
+    "directions": "Outdoor: From New Ross, take the N25 Wexford - New Ross road. At the Horse & Hound Hotel turn onto the R736. Then follow local 'shoot' signage. Indoor: 'New Ross Youth Center', Google directions https://goo.gl/maps/MfedFWbV7ND2 ", 
 
-    "amenities": {
-        "shop": "Yes; approx 0.5 miles", 
-        "garage": "Yes; approx 0.5 miles", 
-        "accomodation": "Yes; in New Ross and Ballinaboola"
-    }, 
 
     "images": [
         "img/phones/Dunbrody2.jpg",

@@ -9,21 +9,19 @@
         "type": "Outdoor range", 
         "link": "https://valleybowmen.blogspot.co.uk/"
     }, 
-
+	
+	"association": [
+	"Irish Field Archery Federation (IFAF)"
+    ], 
+	
     "facilities": {
         "parking": "Yes", 
         "toilet": "Yes", 
-        "refreshements": "Yes - tea & coffee available", 
+        "refreshments": "Yes - tea & coffee available", 
         "other": "N/A"
     },     
 
-    "directions": "From Waterford City take the N25 Waterford - Cork road. In Kilmeaden take the R681 signposted Bunmahon. Follow local 'shoot' signage.", 
-
-    "amenities": {
-        "shop": "Yes; approx 1.5 miles", 
-        "garage": "Yes; approx 1.5 miles", 
-        "accomodation": "Yes; in Waterford"
-    }, 
+    "directions": "From Waterford City take the N25 Waterford - Cork road. In Kilmeaden take the R681 signposted Bunmahon. Then follow local 'shoot' signage.", 
 
     "images": [
         "img/phones/Valley1.jpg",

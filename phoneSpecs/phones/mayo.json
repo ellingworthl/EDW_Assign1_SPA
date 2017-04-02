@@ -9,21 +9,19 @@
         "type": "Outdoor range", 
         "link": "https://https://www.facebook.com/mayoarchery/?fref=ts"
     }, 
-
+	
+	"association": [
+	"Irish Field Archery Federation (IFAF)"
+    ], 
+	
     "facilities": {
         "parking": "Yes", 
         "toilet": "Yes", 
-        "refreshements": "Yes - tea & coffee available", 
+        "refreshments": "Tea & coffee available", 
         "other": "N/A"
     },     
 
-    "directions": "Take the N26 to Ballina. Take the N59 to Crossmolina. Follow local 'shoot' signage after exiting Ballina.", 
-
-    "amenities": {
-        "shop": "Yes; approx 3 miles", 
-        "garage": "Yes; approx 3 miles", 
-        "accomodation": "Yes; in Ballina and Crossmolina"
-    }, 
+    "directions": "Take the N26 to Ballina. Take the N59 to Crossmolina. Then follow local 'shoot' signage after exiting Ballina.",  
 
     "images": [
         "img/phones/Mayo1.jpg",

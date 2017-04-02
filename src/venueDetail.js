@@ -3,33 +3,61 @@ import request from 'superagent' ;
 
 var Specification = React.createClass({
 	  render: function(){
-	  	  var phone = this.props.phone ;	
-
+	  	  var phone = this.props.phone ;	  	   
+	  	  var association = phone.association.map(function(ass,index) {
+              return (
+              		 <dd key={index}>{ass}</dd>
+                     ) ;
+	  	      }) ;
           var display = (
-			
-			<div className="container">
-				<dd>{phone.name}</dd>
-
-				<dd>{phone.facilities.parking}</dd>
-				<dd>{phone.facilities.toilet}</dd>
-				<dd>{phone.facilities.refreshments}</dd>
-				<dd>{phone.facilities.other}</dd> 
-
-				//<dd>{phone.id}</dd>
-
-				//<dd>{phone.images}</dd>
-
-				//<dd>{phone.venue.type}</dd>
-				//<dd>{phone.venue.link}</dd>
-
-				//<dd>{phone.directions}</dd>		
-						
-				//<dd>{phone.description}</dd>
-
-				//<dd>{phone.amenities.accommodation}</dd>
-				//<dd>{phone.amenities.shop}</dd>
-				//<dd>{phone.amenities.garage}</dd>
-
+            <div>
+				<ul className="specs">
+				  <li>
+				    <span>Club Information</span>
+				    <dl>
+				      <dt>Name</dt>
+				      <dd>{phone.name}</dd>
+				      <dt>Venue Type</dt>
+				      <dd>{phone.venue.type}</dd>
+				      <dt>Website or Facebook URL</dt>
+				      <dd>{phone.venue.link}</dd>					  
+				    </dl>
+				  </li>
+				  <li >
+				    <span>Governinging Body</span>
+				    <dl>
+				      <dt>Affiliated To</dt>
+				         {association}
+				    </dl>
+				  </li>
+				  <li>
+				    <span>Venue Information</span>
+				    <dl>
+				      <dt>About the club & their venue</dt>
+				      <dd>{phone.description}</dd>
+				    </dl>
+				  </li>
+				  <li>
+				    <span>Facilities available on-site</span>
+				    <dl>
+				      <dt>Parking</dt>
+				      <dd>{phone.facilities.parking}</dd>
+				      <dt>W/C</dt>
+				      <dd>{phone.facilities.toilet}</dd>
+				      <dt>Refreshments</dt>
+				      <dd>{phone.facilities.refreshments}</dd>
+				      <dt>Other</dt>
+				      <dd>{phone.facilities.other}</dd>
+				    </dl>
+				  </li>	
+				  <li>
+				    <span>How to get there</span>
+				    <dl>
+				      <dt>Directions</dt>
+				      <dd>{phone.directions}</dd>
+				    </dl>
+				  </li> 				  
+				</ul>  
             </div>
 	       )
 	  	  return (

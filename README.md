@@ -28,6 +28,7 @@ Having these facilities on one site would be terribly handy and would have a bro
  + react-router
  + webpack
  + css loader
+ + superagent 
 
  For functionality under construction:
  Firebase (log-in validation)

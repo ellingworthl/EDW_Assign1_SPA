@@ -9,21 +9,20 @@
         "type": "Indoor range", 
         "link": "https://www.facebook.com/archeryforallireland/"
     }, 
-
+	
+	"association": [
+	"Irish Field Archery Federation (IFAF)"
+    ], 
+	
     "facilities": {
         "parking": "Yes", 
         "toilet": "Yes", 
-        "refreshements": "Yes - tea & coffee available", 
+        "refreshments": "Tea & coffee available", 
         "other": "N/A"
     },     
 
-    "directions": "From New Ross take the N25 for Wexford. At Cushinstown church, turn off the main road into 'Achery for All' (AKA Cushinstown Archers).", 
+    "directions": "From New Ross take the N25 for Wexford. At Cushinstown church, turn off the main road into 'Archery for All' (AKA Cushinstown Archers).", 
 
-    "amenities": {
-        "shop": "Yes; approx 1.5 miles", 
-        "garage": "Yes; approx 1.5 miles", 
-        "accomodation": "Yes; in New Ross & Ballinaboola"
-    }, 
 
     "images": [
         "img/phones/Cushinstown1.jpg", 

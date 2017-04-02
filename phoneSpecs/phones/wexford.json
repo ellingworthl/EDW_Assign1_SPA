@@ -9,21 +9,20 @@
         "type": "Outdoor range", 
         "link": "https://www.facebook.com/Wexford-Archery-606440822748006/?fref=ts"
     }, 
-
+	
+	"association": [
+	"Irish Field Archery Federation (IFAF)"
+    ], 
+	
     "facilities": {
         "parking": "Yes", 
         "toilet": "Yes", 
-        "refreshements": "Yes - tea & coffee available", 
+        "refreshments": "Tea & coffee available", 
         "other": "N/A"
     },     
 
     "directions": "From New Ross, take the R700 (leading to N30) Enniscorty road. At Mannion's Bar turn in at the gatelodge to 'Woodville House' and follow the driveway in.", 
 
-    "amenities": {
-        "shop": "Yes; approx 0.5 miles", 
-        "garage": "Yes; approx 0.5 miles", 
-        "accomodation": "Yes; in New Ross"
-    }, 
 
     "images": [
         "img/phones/Wexford1.jpg",

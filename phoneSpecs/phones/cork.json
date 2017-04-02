@@ -9,20 +9,20 @@
         "type": "Outdoor range", 
         "link": "http://southcorkfieldarchers.ie/"
     }, 
-
+	
+	"association": [
+	"Irish Field Archery Federation (IFAF)"
+    ], 
+	
     "facilities": {
         "parking": "Yes", 
         "toilet": "Yes", 
-        "refreshements": "No", 
+        "refreshments": "No", 
         "other": "N/A"
     },     
 
-    "directions": "From the N27, after Cork Airport, take the R600 to Riverstick. In the village take the L3206 and follow local 'shoot'.", 
+    "directions": "From the N27, after Cork Airport, take the R600 to Riverstick. In the village take the L3206 and follow local 'shoot' signage.", 
 
-    "amenities": {
-        "shop": "Yes; approx 0.5 miles", 
-        "garage": "Yes; approx 0.5 miles", 
-        "accomodation": "Yes; in Riverstick and Carrigaline"
     }, 
 
     "images": [
