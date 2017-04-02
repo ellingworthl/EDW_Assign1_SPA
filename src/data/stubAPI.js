@@ -50,11 +50,11 @@ if ( localStorage.getItem('posts') ) {
   localStorage.setItem('updated', false ) ;
 }
  
- var stubAPI = {
+  var stubAPI = {
      getAll : function() {
         return posts ;
       },
-     add : function(t,l,f,s,a) {
+     add : function(t,l) {
           var id = 1 ;
           var last = _.last(posts) ;
           if (last) {
@@ -63,13 +63,7 @@ if ( localStorage.getItem('posts') ) {
           var len = posts.length ;
           var newL_len = posts.push({ 
           	'id': id,  
-             title: t, 
-             link : l, 
-             forename: f, 
-             surname: s, 
-             association: a, 
-             comments: [], 
-             upvotes: 0 }) ;
+             title: t, link : l, username: '', comments: [], upvotes: 0 }) ;
            localStorage.setItem('updated', true ) ;
            return newL_len > len ;
           },
@@ -95,7 +89,7 @@ if ( localStorage.getItem('posts') ) {
                 }
         return result ;
         },
-     addComment : function(postId,c,f,s,a) {
+     addComment : function(postId,c,n) {
         var post = this.getPost(postId ) ;
         var id = 1 ;
         var last = _.last(post.comments) ;
@@ -103,11 +97,7 @@ if ( localStorage.getItem('posts') ) {
            id = last.id + 1 ;
         }
         post.comments.push({ 'id': id,  
-                 comment: c , 
-                 forename: f,
-                 surname: s, 
-                 association: a, 
-                 upvotes: 0 } ) ;
+                 comment: c , author: n, upvotes: 0 } ) ;
         localStorage.setItem('updated', true ) ;
         },
      upvoteComment : function(postId,commentId) {
