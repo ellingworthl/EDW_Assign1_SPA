@@ -3,7 +3,7 @@ import _ from 'lodash';
 //new import to support routing
 import { Link } from 'react-router';
 //import venue data
-import Phones from './Data';
+import Venues from './venueData';
 
 var SelectBox = React.createClass({
     handleChange : function(e, type,value) {
@@ -33,37 +33,36 @@ var SelectBox = React.createClass({
         }
      });
 
-//MAIN PHONE LIST
      //react router tag "Link " added to replace "a href" HTML hyperlink tag
-     var PhoneItem = React.createClass({
+     var VenueItem = React.createClass({
       render: function(){
-        //console.log ('PhoneItem');
-        //console.log (this.props.phone.name);
+        //console.log ('VenueItem');
+        //console.log (this.props.venue.name);
         return (
-        <li className="thumbnail phone-listing">
-        <Link to={'/phones/' + this.props.phone.id} className="thumb">
-        <img src={"/images/" + this.props.phone.imageUrl} 
-        alt={this.props.phone.name} /> </Link>
-        <Link to={'/phones/' + this.props.phone.id}> {this.props.phone.name}</Link>
-        <p>{this.props.phone.snippet}</p>
-        <p>{this.props.phone.county}</p>
-        <p>{this.props.phone.phoneno}</p>
+        <li className="thumbnail venue-listing">
+        <Link to={'/venues/' + this.props.venue.id} className="thumb">
+        <img src={"/images/" + this.props.venue.imageUrl} 
+        alt={this.props.venue.name} /> </Link>
+        <Link to={'/venue/' + this.props.venue.id}> {this.props.venue.name}</Link>
+        <p>{this.props.venue.snippet}</p>
+        <p>{this.props.venue.county}</p>
+        <p>{this.props.venue.phoneno}</p>
         </li>
         );
       }
     });
 
-var FilteredPhoneList = React.createClass({
+var FilteredVenueList = React.createClass({
 render: function(){
-//console.log ('FilteredPhoneList');
-//console.log (this.props.phones);
-  var displayedPhones = this.props.phones.map(function(phone) {
-    return <PhoneItem key={phone.id} phone={phone} /> ;
+//console.log ('FilteredVenueList');
+//console.log (this.props.venues);
+  var displayedVenues = this.props.venues.map(function(venue) {
+    return <VenueItem key={venue.id} venue={venue} /> ;
   }) ;
   return (
           <div className="col-md-10">
-            <ul className="phones">
-                {displayedPhones}
+            <ul className="venues">
+                {displayedVenues}
             </ul>
           </div>
     ) ;
@@ -82,7 +81,7 @@ handleChange : function(type,value) {
         }
 }, 
  render: function(){
-     var list = Phones.filter(function(p) {
+     var list = Venues.filter(function(p) {
             return p.name.toLowerCase().search(
                    this.state.search.toLowerCase() ) !== -1 ;
               }.bind(this) );
@@ -95,7 +94,7 @@ handleChange : function(type,value) {
                 <SelectBox onUserInput={this.handleChange } 
                        filterText={this.state.search} 
                        sort={this.state.sort} />
-                 <FilteredPhoneList phones={filteredList} />
+                 <FilteredVenueList venues={filteredList} />
             </div> 
             </div>                   
           </div>

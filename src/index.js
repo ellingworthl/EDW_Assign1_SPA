@@ -29,7 +29,7 @@ import VenueDetail from './venueDetail';
                <Route path='reviews' component={ReviewApp} />
                <Route path='posts/:postId' component={CommentView} />
                <Route path='venues' component={VenueApp} />
-               <Route path="phones/:id" component={VenueDetail} />
+               <Route path="venue/:id" component={VenueDetail} />
                <Route path='register' component={RegisterApp} />
             </Route>
           </Router>
