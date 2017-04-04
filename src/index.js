@@ -1,13 +1,10 @@
 import React from 'react';
 import ReactDOM from 'react-dom';
-//import ReviewApp from './App';
 import '../node_modules/bootstrap/dist/css/bootstrap.css';
 //import '../src/css/bootstrap.css';
 
 //new import requirements for routing changes
 import { Router, Route, IndexRoute, browserHistory } from 'react-router';
-//import NavBar from './content/NavBar';
-//import Footer from './content/Footer';
 import Landing from './content/Landing';
 import Main from './content/Main';
 import About from './content/About';
@@ -15,9 +12,9 @@ import ReviewApp from './ReviewApp';
 import CommentView from './commentPage'
 import RegisterApp from './registerApp';
 import VenueApp from './VenueApp';
-//VENUE import
 import VenueDetail from './venueDetail';
-
+//EVENT import
+import EventApp from './eventApp';
 
 // ReactDOM.render statement for routing
      ReactDOM.render(
@@ -30,6 +27,7 @@ import VenueDetail from './venueDetail';
                <Route path='posts/:postId' component={CommentView} />
                <Route path='venues' component={VenueApp} />
                <Route path="venue/:id" component={VenueDetail} />
+               <Route path='events' component={EventApp} />			   
                <Route path='register' component={RegisterApp} />
             </Route>
           </Router>

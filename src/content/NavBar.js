@@ -31,6 +31,9 @@ var NavBar = React.createClass({
                       <Link to="venues">Venues</Link>
                   </li>
                   <li>
+                      <Link to="events">Events</Link>
+                  </li>				  
+                  <li>
                       <Link to="reviews">Reviews</Link>
                   </li>
                   <li>
