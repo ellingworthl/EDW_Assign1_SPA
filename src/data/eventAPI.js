@@ -1,7 +1,7 @@
 import _ from 'lodash';
 
-console.log ('init contacts')
-var contacts = [
+console.log ('init events')
+var events = [
     {
         id: 1 ,
 		"name": "23-Apr-17",
@@ -37,28 +37,28 @@ var contacts = [
 //name = date // address = venue // phone_number = round // target_number = N/A column
 //make key the date (was phone_number)
 var eventAPI = {
-	 delete : function(k) {
-       var elements = _.remove(contacts, 
-           function(contact) {
-                 return contact.phone_number === k;
-              });
-       return elements; 
-	 },
 	 getAll : function() {
-	     return contacts ;
+	     return events ;
 	 },
 	 add : function(n,a,p) {
-      var len = contacts.length ;
-      var newL_len = contacts.push({
+      var len = events.length ;
+      var newL_len = events.push({
          name: n, address : a, phone_number: p }) ;
       return newL_len > len ;
 	 },
+   delete : function(k) {
+       var elements = _.remove(events, 
+           function(event) {
+                 return event.phone_number === k;
+              });
+       return elements; 
+   },   
 	 update : function(key,n,a,p) {
-	    var index = _.findIndex(contacts, function(contact) {
-	         return contact.phone_number === key;
+	    var index = _.findIndex(events, function(event) {
+	         return event.phone_number === key;
 	      } );      
 	    if (index !== -1) {
-	       contacts.splice(index, 1, {name: n, address: a, phone_number: p});
+	       events.splice(index, 1, {name: n, address: a, phone_number: p});
          return true ;
 	      }
       return false ;

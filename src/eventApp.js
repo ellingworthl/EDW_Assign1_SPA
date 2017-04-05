@@ -5,7 +5,10 @@ import buttons from './content/eventButtons';
 //name = round // address = venue // phone_number = date // target_number = N/A column
 //need to sort to have date (ph) added under DATE and round (name) added under ROUND
 
-    var ContactForm = React.createClass({
+//Contact = Event
+//Contacts = Events
+
+    var EventForm = React.createClass({
         getInitialState: function() {
            return { name: '', address: '', phone_number : ''};
        },
@@ -34,23 +37,23 @@ import buttons from './content/eventButtons';
             <tr>
               <td>
               <input type="text" className="form-control" 
-                     placeholder="Date (DD-MM-YYYY)"
-                     value={this.state.phone_number}
-                     onChange={this.handlePhoneNumChange}
+                     placeholder="Date (DD/MM/YYYY)"
+                     value={this.state.name}
+                     onChange={this.handleNameChange}
               />
               </td>
               <td>
               <input type="text" className="form-control"
-                     placeholder="Event Host/Venue"
+                     placeholder="Host Club/Venue"
                      value={this.state.address}
                      onChange={this.handleAddressChange}
               />
               </td>
               <td>
-               <input type="text" className="form-control" 
-                     placeholder="Type of Round"
-                     value={this.state.name}
-                     onChange={this.handleNameChange}
+              <input type="text" className="form-control" 
+                     placeholder="Event Type"
+                     value={this.state.phone_number}
+                     onChange={this.handlePhoneNumChange}
               />
               </td>
               <td>
@@ -62,13 +65,13 @@ import buttons from './content/eventButtons';
         }
       });
 
-    var Contact = React.createClass({
+    var Event = React.createClass({
           getInitialState : function() {
              return {
               status : '',
-              name: this.props.contact.name,
-              address: this.props.contact.address,
-              phone_number: this.props.contact.phone_number
+              name: this.props.event.name,
+              address: this.props.event.address,
+              phone_number: this.props.event.phone_number
              } ;
           },
           handleDelete : function() {
@@ -78,13 +81,13 @@ import buttons from './content/eventButtons';
               this.setState({ status : 'edit'} )
           }, 
           handleConfirm : function(e) { 
-              this.props.deleteHandler(this.props.contact.phone_number) ;
+              this.props.deleteHandler(this.props.event.phone_number) ;
           },    
           handleCancel : function() {
              this.setState({ status : '', 
-                   name: this.props.contact.name,
-                   address: this.props.contact.address,
-                   phone_number: this.props.contact.phone_number} ) ;
+                   name: this.props.event.name,
+                   address: this.props.event.address,
+                   phone_number: this.props.event.phone_number} ) ;
             }, 
           handleSave : function(e) {
               e.preventDefault();
@@ -95,7 +98,7 @@ import buttons from './content/eventButtons';
                 return;
               }
                             this.setState({status : ''} )
-              this.props.updateHandler(this.props.contact.phone_number,
+              this.props.updateHandler(this.props.event.phone_number,
                        name,address,phone_number);
 
             }, 
@@ -155,28 +158,29 @@ import buttons from './content/eventButtons';
             }
           });
 
-    var ContactList = React.createClass({
+    var EventList = React.createClass({
           render: function(){
-              var contactRows = this.props.contacts.map(function(contact){
+              var eventRows = this.props.events.map(function(event){
                   return (
-                   <Contact key={contact.phone_number}  contact={contact} 
+                   <Event key={event.phone_number}  event={event} 
                        deleteHandler={this.props.deleteHandler} 
                        updateHandler={this.props.updateHandler} />
                     ) ;
                 }.bind(this) );
               return (
                   <tbody >
-                      {contactRows}
-                      <ContactForm 
+                      {eventRows}
+                      <EventForm 
                            addHandler={this.props.addHandler}/>
                   </tbody>
                 ) ;
             }
           });
 
+//TABLE FORMAT		  
 // ORIG: <table className="table table-bordered">	
 // ALT FORMATS:http://allenfang.github.io/react-bootstrap-table/example.html#basic  
-    var ContactsTable = React.createClass({
+    var EventsTable = React.createClass({
           render: function(){
               return (
 				<table className="table table-striped table-hover table-condensed">
@@ -184,12 +188,12 @@ import buttons from './content/eventButtons';
                       <tr>
                       <th>DATE</th>
                       <th>VENUE</th>
-                      <th>ROUND</th>
+                      <th>EVENT</th>
                       <th></th>
                       <th></th>
                       </tr>
                     </thead>
-                      <ContactList contacts={this.props.contacts} 
+                      <EventList events={this.props.events} 
                           deleteHandler={this.props.deleteHandler} 
                           addHandler={this.props.addHandler}
                            updateHandler={this.props.updateHandler}  />
@@ -200,30 +204,30 @@ import buttons from './content/eventButtons';
 
 //name = date // address = venue // phone_number = round // target_number = N/A column
       var EventApp = React.createClass({
-          deleteContact : function(k) {
+          deleteEvent : function(k) {
              api.delete(k);
              this.setState( {} ) ;
           },
-          addContact : function(n,a,p) {
+          addEvent : function(n,a,p) {
              api.add(n,a,p) ;
              this.setState({});
           },
-          updateContact : function(key,n,a,p) {
+          updateEvent : function(key,n,a,p) {
               if (api.update(key,n,a,p) )  { 
                   this.setState({});  
               }             
           },  
           render: function(){
-              var contacts = api.getAll() ; 
+              var events = api.getAll() ; 
               return (    
                     <div>
                        <h1>Upcoming Archery Events</h1>
 					   <p>Country-wide competitions are listed here. </p>
 					   <p>Check regularly for new events and updates to any published events.</p>
-                       <ContactsTable contacts={contacts} 
-                          deleteHandler={this.deleteContact}
-                          addHandler={this.addContact} 
-                          updateHandler={this.updateContact}  />
+                       <EventsTable events={events} 
+                          deleteHandler={this.deleteEvent}
+                          addHandler={this.addEvent} 
+                          updateHandler={this.updateEvent}  />
                     </div>
               );
           }
