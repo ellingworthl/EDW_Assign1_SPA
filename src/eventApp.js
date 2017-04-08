@@ -10,50 +10,50 @@ import buttons from './content/eventButtons';
 
     var EventForm = React.createClass({
         getInitialState: function() {
-           return { name: '', address: '', phone_number : ''};
+           return { round: '', venue: '', date : ''};
        },
-       handleNameChange: function(e) {
-            this.setState({name: e.target.value});
+       handleRoundChange: function(e) {
+            this.setState({round: e.target.value});
        },
-       handleAddressChange: function(e) {
-           this.setState({address: e.target.value});
+       handleVenueChange: function(e) {
+           this.setState({venue: e.target.value});
        },
-       handlePhoneNumChange: function(e) {
-           this.setState({phone_number: e.target.value});
+       handleDateChange: function(e) {
+           this.setState({date: e.target.value});
        },
        handleSubmit: function(e) {
         e.preventDefault();
-        var name = this.state.name.trim();
-        var address = this.state.address.trim();
-        var phone_number = this.state.phone_number.trim();
-        if (!name || !address || !phone_number) {
+        var round = this.state.round.trim();
+        var venue = this.state.venue.trim();
+        var date = this.state.date.trim();
+        if (!round || !venue || !date) {
           return;
         }
-        this.props.addHandler(name,address,phone_number);
-        this.setState({name: '', address: '', phone_number: ''});
+        this.props.addHandler(round,venue,date);
+        this.setState({round: '', venue: '', date: ''});
        },  
        render: function(){
           return (
             <tr>
               <td>
               <input type="text" className="form-control" 
-                     placeholder="Date (DD/MM/YYYY)"
-                     value={this.state.name}
-                     onChange={this.handleNameChange}
+                     placeholder="Event Type"
+                     value={this.state.round}
+                     onChange={this.handleRoundChange}
               />
               </td>
               <td>
               <input type="text" className="form-control"
                      placeholder="Host Club/Venue"
-                     value={this.state.address}
-                     onChange={this.handleAddressChange}
+                     value={this.state.venue}
+                     onChange={this.handleVenueChange}
               />
               </td>
               <td>
               <input type="text" className="form-control" 
-                     placeholder="Event Type"
-                     value={this.state.phone_number}
-                     onChange={this.handlePhoneNumChange}
+                     placeholder="Date (YYYY/MM/DD)"
+                     value={this.state.date}
+                     onChange={this.handleDateChange}
               />
               </td>
               <td>
@@ -69,9 +69,9 @@ import buttons from './content/eventButtons';
           getInitialState : function() {
              return {
               status : '',
-              name: this.props.event.name,
-              address: this.props.event.address,
-              phone_number: this.props.event.phone_number
+              round: this.props.event.round,
+              venue: this.props.event.venue,
+              date: this.props.event.date
              } ;
           },
           handleDelete : function() {
@@ -81,44 +81,44 @@ import buttons from './content/eventButtons';
               this.setState({ status : 'edit'} )
           }, 
           handleConfirm : function(e) { 
-              this.props.deleteHandler(this.props.event.phone_number) ;
+              this.props.deleteHandler(this.props.event.date) ;//Handler uses the key / k
           },    
           handleCancel : function() {
              this.setState({ status : '', 
-                   name: this.props.event.name,
-                   address: this.props.event.address,
-                   phone_number: this.props.event.phone_number} ) ;
+                   round: this.props.event.round,
+                   venue: this.props.event.venue,
+                   date: this.props.event.date} ) ;
             }, 
           handleSave : function(e) {
               e.preventDefault();
-              var name = this.state.name.trim();
-              var address = this.state.address.trim();
-              var phone_number = this.state.phone_number.trim();
-              if (!name || !address || !phone_number) {
+              var round = this.state.round.trim();
+              var venue = this.state.venue.trim();
+              var date = this.state.date.trim();
+              if (!round || !venue || !date) {
                 return;
               }
                             this.setState({status : ''} )
-              this.props.updateHandler(this.props.event.phone_number,
-                       name,address,phone_number);
+              this.props.updateHandler(this.props.event.date,
+                       round,venue,date);// this.props.event.date part of the key
 
             }, 
-          handleNameChange: function(e) {
-              this.setState({name: e.target.value});
+          handleRoundChange: function(e) {
+              this.setState({round: e.target.value});
             },
-          handleAddressChange: function(e) {
-              this.setState({address: e.target.value});
+          handleVenueChange: function(e) {
+              this.setState({venue: e.target.value});
             },
-          handlePhoneNumChange: function(e) {
-              this.setState({phone_number: e.target.value});
+          handleDateChange: function(e) {
+              this.setState({date: e.target.value});
             },
           render: function(){
                var activeButtons = buttons.normal ;
                var leftButtonHandler = this.handleEdit ;
                var rightButtonHandler = this.handleDelete ;
                var fields = [
-                     <td key={'name'} >{this.state.name}</td>,
-                      <td key={'address'}>{this.state.address}</td>,
-                      <td key={'phone_number'}>{this.state.phone_number}</td>
+                     <td key={'round'} >{this.state.round}</td>,
+                      <td key={'venue'}>{this.state.venue}</td>,
+                      <td key={'date'}>{this.state.date}</td>
                    ] ;
               if (this.state.status === 'del' ) {
                    activeButtons = buttons.delete ;
@@ -129,15 +129,15 @@ import buttons from './content/eventButtons';
                    leftButtonHandler = this.handleSave;
                    rightButtonHandler = this.handleCancel ;
                    fields = [
-                      <td key={'name'}><input type="text" className="form-control"
-                         value={this.state.name}
-                         onChange={this.handleNameChange} /> </td>,
-                      <td key={'address'}><input type="text" className="form-control"
-                         value={this.state.address}
-                         onChange={this.handleAddressChange} /> </td>,
-                      <td key={'phone_number'}><input type="text" className="form-control"
-                         value={this.state.phone_number}
-                         onChange={this.handlePhoneNumChange} /> </td>,
+                      <td key={'round'}><input type="text" className="form-control"
+                         value={this.state.round}
+                         onChange={this.handleRoundChange} /> </td>,
+                      <td key={'venue'}><input type="text" className="form-control"
+                         value={this.state.venue}
+                         onChange={this.handleVenueChange} /> </td>,
+                      <td key={'date'}><input type="text" className="form-control"
+                         value={this.state.date}
+                         onChange={this.handleDateChange} /> </td>,
                    ] ;
                }
               return (
@@ -162,7 +162,7 @@ import buttons from './content/eventButtons';
           render: function(){
               var eventRows = this.props.events.map(function(event){
                   return (
-                   <Event key={event.phone_number}  event={event} 
+                   <Event key={event.date}  event={event} 
                        deleteHandler={this.props.deleteHandler} 
                        updateHandler={this.props.updateHandler} />
                     ) ;
@@ -186,9 +186,9 @@ import buttons from './content/eventButtons';
 				<table className="table table-striped table-hover table-condensed">
                     <thead>
                       <tr>
-                      <th>DATE</th>
-                      <th>VENUE</th>
                       <th>EVENT</th>
+                      <th>VENUE</th>
+                      <th>DATE</th>
                       <th></th>
                       <th></th>
                       </tr>
@@ -208,12 +208,12 @@ import buttons from './content/eventButtons';
              api.delete(k);
              this.setState( {} ) ;
           },
-          addEvent : function(n,a,p) {
-             api.add(n,a,p) ;
+          addEvent : function(r,v,d) {
+             api.add(r,v,d) ;
              this.setState({});
           },
-          updateEvent : function(key,n,a,p) {
-              if (api.update(key,n,a,p) )  { 
+          updateEvent : function(key,r,v,d) {
+              if (api.update(key,r,v,d) )  { 
                   this.setState({});  
               }             
           },  
