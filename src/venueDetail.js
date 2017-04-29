@@ -1,6 +1,18 @@
 import React from 'react';
 import request from 'superagent' ; 
 
+//created Header section
+var HeaderSection = React.createClass({
+	  render: function(){
+		return (
+	  		<div>
+			       <h1>{this.props.venue.name}</h1>
+		           <p>{this.props.venue.description}</p>
+               </div>
+    );
+  }
+});
+
 var Specification = React.createClass({
 	  render: function(){
 	  	  var venue = this.props.venue ;	  	   
@@ -12,13 +24,7 @@ var Specification = React.createClass({
           var display = (
             <div>
 				<ul className="specs">
-				  <li >
-				    <span>Governinging Body</span>
-				    <dl>
-				      <dt>Affiliated To</dt>
-				         {association}
-				    </dl>
-				  </li>				  
+							  
 				  <li>
 				    <span>Club Information</span>
 				    <dl>
@@ -30,13 +36,7 @@ var Specification = React.createClass({
 				      <dd>{venue.venue.link}</dd>					  
 				    </dl>
 				  </li>
-				  <li>
-				    <span>Venue Information</span>
-				    <dl>
-				      <dt>About the club & their venue</dt>
-				      <dd>{venue.description}</dd>
-				    </dl>
-				  </li>
+
 				  <li>
 				    <span>Facilities available on-site</span>
 				    <dl>
@@ -50,13 +50,23 @@ var Specification = React.createClass({
 				      <dd>{venue.facilities.other}</dd>
 				    </dl>
 				  </li>	
+				
+				  <li >
+				    <span>Governinging Body</span>
+				    <dl>
+				      <dt>Affiliated To</dt>
+				         {association}
+				    </dl>
+				  </li>					  
+				  
 				  <li>
 				    <span>How to get there</span>
 				    <dl>
 				      <dt>Directions</dt>
-				      <dd>{venue.directions}</dd>
+				      <dd>{venue.directions}</dd>	  
 				    </dl>
-				  </li> 				  
+				  </li> 	
+			  
 				</ul>  
             </div>
 	       )
@@ -88,9 +98,6 @@ var ImagesSection = React.createClass({
                 ) ;
 	  	return (
 	  		<div>
-                   {mainImage}
-			       <h1>{this.props.venue.name}</h1>
-		           <p>{this.props.venue.description}</p>
 		           <ul className="venue-thumbs">
 		               {thumbImages}
 		           </ul>
@@ -99,6 +106,7 @@ var ImagesSection = React.createClass({
 	  }
 })
 
+//reordered VenueDetail display
 var VenueDetail = React.createClass({
 	   getInitialState: function() {
            return { venue: null };
@@ -118,8 +126,9 @@ var VenueDetail = React.createClass({
           if (venue) {
   			display =  (
   				<div>
-              	   <ImagesSection venue={venue} />
-              	   <Specification  venue={venue} />  	 
+				   <HeaderSection venue={venue} />	
+              	   <Specification  venue={venue} />  
+              	   <ImagesSection venue={venue} /> 	 
                 </div>
                 )
           }

@@ -30,8 +30,8 @@ img.phone {
   margin-bottom: 2em;
   background-color: white;
   padding: 2em;
-  height: 400px;
-  width: 400px;
+  height: 200px;
+  width: 200px;
 }
 
 ul.phone-thumbs {
@@ -62,7 +62,7 @@ ul.specs {
 
 ul.specs > li{
   display: inline-block;
-  width: 300px;
+  width: 380px;
   vertical-align: top;
 }
 
