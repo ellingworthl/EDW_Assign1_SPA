@@ -1,4 +1,4 @@
-# Assignment 2 - AIP integration with ReactJS app.
+# Assignment 2 - Web AIP integration with ReactJS app.
 
 Name: Lynn Ellingworth
 
@@ -32,12 +32,28 @@ Having these facilities on one site would be terribly handy and would have a bro
  + superagent 
  
  Assignment 2
- + mongoose
- + node
- + lodash
- + express
- + axios
- + react-scripts
+Config installs supporting Web API:
+ + npm install --save-dev babel-cli
+ + npm install --save-dev babel-preset-es2015 babel-preset-stage-2
+ + npm install --save express
+ + npm install --save-dev nodemon
+ + npm install eslint babel-eslint
+ + eslint --init
+ + npm install --save body-parser
+ + npm install --save lodash
+ + npm install --save axios
+ + npm install -save mongoose
+ + npm install mongodb --save
+ 
+ Config installs supporting API testing:
+ + npm install --save-dev mocha
+ + npm install --save-dev should
+ + npm install --save-dev supertest
+ + npm install babel-core
+ + npm install --save-dev Mockgoose
+ + npm install save-dev cross-env
+ + npm run test
+ + npm install --save-dev Mochawesome
 
 For functionality under construction:
  Firebase (log-in validation)
@@ -226,3 +242,4 @@ For Assignment 2 I have used:
 [image2]: ./Assignment1_Model.png
 [image3]: ./Assignment1_Screen_Collapsed.png
 [image4]: ./Assignment1_Screen_FullScreen.png
+"# EWD_Assign2_WebAPI" 
