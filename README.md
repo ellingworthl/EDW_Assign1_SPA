@@ -1,4 +1,4 @@
-# Assignment 1 - ReactJS app.
+# Assignment 1 - SPA ReactJS app.
 
 Name: Lynn Ellingworth
 
