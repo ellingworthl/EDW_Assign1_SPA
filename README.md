@@ -1,8 +1,4 @@
-<<<<<<< HEAD
-# Assignment 1 - SPA ReactJS app.
-=======
-# Assignment 2 - Web AIP integration with ReactJS app.
->>>>>>> origin/master
+# Assignment 1 - ReactJS app.
 
 Name: Lynn Ellingworth
 
@@ -21,61 +17,28 @@ Having these facilities on one site would be terribly handy and would have a bro
  + Feature to upvote both the main reviews and the comments associated with those reviews. 
  + Feature to contact site administrator to request venue be added (embedded email link)
  
- Assignment 2 - extension of Client App
+ Functionality under construction:
  + List of archery venues which can be filtered (json file data)
  + Drill-down capability to access further information about each venue e.g. range-type, images and blub representing the club, directions and on-site facilities (also stored on json file)
- + Events list for competitions (json file data) which can be added to, edited, or deleted.
- 
+
 ## Installation requirements.
- + ReactJS
+ + ReactJS v15.3.0
  + Bootstrap 3
  + create-react-app tool
  + react-router
  + webpack
  + css loader
  + superagent 
- 
- Assignment 2
-Config installs supporting Web API:
- + npm install --save-dev babel-cli
- + npm install --save-dev babel-preset-es2015 babel-preset-stage-2
- + npm install --save express
- + npm install --save-dev nodemon
- + npm install eslint babel-eslint
- + eslint --init
- + npm install --save body-parser
- + npm install --save lodash
- + npm install --save axios
- + npm install -save mongoose
- + npm install mongodb --save
- 
- Config installs supporting API testing:
- + npm install --save-dev mocha
- + npm install --save-dev should
- + npm install --save-dev supertest
- + npm install babel-core
- + npm install --save-dev Mockgoose
- + npm install save-dev cross-env
- + npm run test
- + npm install --save-dev Mochawesome
 
-For functionality under construction:
+ For functionality under construction:
  Firebase (log-in validation)
 
-In order to view the app after cloning it from the repository (EDW_Assign1_SPA), a viewer must
- + Open a command window in the repositiory folder (hold Shift Key & right-click the mouse)
+In order to view the app after cloning it from the repository, a viewer must
+ + Open a command window in the repositiory folder (hold Shift Key & right-clcik the mouse)
  + type npm install 
  + type npm start
  + in browser view localhost://3000
 
- Assignment 2
-To view the application, clone it from the repository (EDW_Assign2_WebAPI), a viewer must 
- + Open a command window in the repositiory folder (hold Shift Key & right-click the mouse)
- + type npm install 
- + type npm start 
- + enter the following in the browser: http//locahost/8080/FieldArcheryFinder/#/home  
-
- 
 ## Data Model Design.
 
 ReviewApp 
@@ -91,7 +54,7 @@ Sample of the data on that page (API):
         upvotes : 10
       },
 
-VenueApp (Completed as part of Assignment 2):
+VENUE APP COMPONENTS UNDER CONSTRUCTION:
 venue overview "clubs.json":
 [ 
     {
@@ -161,7 +124,7 @@ This diagramatic image also shows the app's design and its components
 ![][image1]
 
 ## Routing.
- List each route supported and state the associated view . . . . . 
+. . . . List each route supported and state the associated view . . . . . 
 
 + /root for app (IndexRoute = Landing.js)
 + /about - descriptive text about the app
@@ -170,19 +133,22 @@ This diagramatic image also shows the app's design and its components
 + /reviews/:postid - allows reviewer to comment, leave name & upvote an existing review (local storage)
 + /register - will allow a reviewer to register (under construction)
 
-Assignement 2 - Additional routing:
-+ /venues - dynamic content added. Lists venues. App contains logo and summary information for each venue. List sortable using either Name or County and searchable by Venue name. CSS modified to expand container & resize image.
-+ /venues/:clubid - shows detailed information about each venue (API). HeaderSection component created. Detail reorder in terms of importance.  will show specific detail about the club. Venue Display reordered (Header, Information, then images). CSS modified to increase Information section.
-+ /events - new react component and routing to support eventsApp (API). Bootstap CCS applied.
+Additional planned routing:
++ /venues/:clubid - will show specific detail about the club (under construction with parent component 'venues')
+
 
 ## Extra features
-Briefly explain any non-standard features, functional or non-functional (e.g. user registration, authentication) developed for the app . . . . . .  
 
-One intended feature was Google maps, using Google API Key, in the Venue Detail component. The map, when added to Club.json read as plain text not URL. Using an embedded google map, as a component of Venue Detail resulted in a single map popluating all Detail pages. Ultimately, neither Map option has been used.
+. . . . . Briefly explain any non-standard features, functional or non-functional (e.g. user registration, authentication) developed for the app . . . . . .  
+
+None so far. 
++ 'registerApp' not built. 
++ 'club detail' under construction. One feature will be Google maps, using Google API Key, in this component.
 
 
 ## Independent learning.
-State the non-standard aspects of Angular (or other related technologies) that you researched and applied in this assignment . . . . .  
+
+. . . . . State the non-standard aspects of Angular (or other related technologies) that you researched and applied in this assignment . . . . .  
 This semester and this assignment has been a phenominal learning curve for me. In spite of working in IT I have no coding background at all.
 
 For this assignment I have religed heavily on a brilliant react tutorial on YouTube:
@@ -202,23 +168,12 @@ To help with building the FAF app I have used:
 + http://jsonlint.com/
 + https://startbootstrap.com/template-overviews/half-slider/
 + http://bootsnipp.com/snippets/featured/clean-modal-login-form
-+ https://github.com/tylermcginnis/react-router-firebase-auth
-+ resizeyourimage.com/EN/#transform=&page_no=1&no_of_pages=1&filename=0.jpg&selection_top=36&selection_left=55&selection_width=437&selection_height=292&zoom=912&demomode=true
 
 Installed, but not used:
 + https://www.npmjs.com/package/generator-react-webpack-scaffold
 
 Registered for but not used (intended for Club Detail):
 + https://developers.google.com/maps/documentation/android-api/signup
-
-For Assignment 2 I have used:
-+ https://www.getpostman.com
-+ https://cloud.mongodb.com/user#/login?nds=true
-+ https://www.mongodb.com/cloud/atlas/lp/try-2?jmp=search&utm_source=google&utm_campaign=EMEA-UK-IE-MongoDB-to-Atlas-Brand-Beta&utm_keyword=%2Bmongodb&utm_device=c&utm_network=g&utm_medium=cpc&utm_creative=184482994740&utm_matchtype=b&_bt=184482994740&_bk=%2Bmongodb&_bm=b&_bn=g&gclid=CInmkv_rvdMCFWu-7QodcKINKw
-+ https://www.npmjs.com/package/mongodb
-+ https://mongodb.github.io/node-mongodb-native/
-+ https://robomongo.org/
-
 
 Additional learning has been through the following:
 + Head First: JavaScript
@@ -229,22 +184,8 @@ Additional learning has been through the following:
 + https://www.youtube.com/watch?v=Ybn6Q92m4xg
 + https://www.lifewire.com/list-of-command-prompt-commands-4092302
 
-For Assignment 2 I have used:
-+ https://docs.mongodb.com/manual/reference/mongo-shell/
-+ https://www.digitalocean.com/community/tutorials/how-to-connect-node-js-to-a-mongodb-database-on-a-vps
-+ https://www.youtube.com/watch?v=pWbMrx5rVBE
-+ https://www.youtube.com/watch?v=nN2JlbVWy2k&t=40s
-+ https://www.youtube.com/watch?annotation_id=annotation_1262334303&feature=iv&src_vid=5e1NEdfs4is&v=ndKRjmA6WNA
-+ https://www.youtube.com/watch?v=U8XF6AFGqlc
-+ https://www.youtube.com/watch?v=gnsO8-xJ8rs
-+ http://stackoverflow.com/ (multiple queries about MongoDB and Mongoose.)
-+ http://mongoosejs.com/
-+ http://www.tutorialspoint.com/mongodb/
-+ https://ddrohan.github.io/wit-wad/topic02-node/talk-3-node-3/node.3.pdf
 
 [image1]: ./Assignment1_Design.png
 [image2]: ./Assignment1_Model.png
 [image3]: ./Assignment1_Screen_Collapsed.png
 [image4]: ./Assignment1_Screen_FullScreen.png
-"# EWD_Assign2_WebAPI" 
-"# EWD_Assign2_SPA-WebAPI" 
